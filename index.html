@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zoum Services | Parfums & Cosmétiques</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#faf8f6;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#111,#6b4b3e);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+header p{
+    margin-top:8px;
+    color:#eee;
+}
+
+nav{
+    background:white;
+    padding:16px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:10;
+    box-shadow:0 2px 10px #ddd;
+}
+
+nav a{
+    color:#222;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 10px;
+}
+
+.hero{
+    text-align:center;
+    padding:70px 20px;
+    background:linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url("images/hero.jpg") center/cover;
+    color:white;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:19px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.whatsapp{
+    background:#25D366;
+    color:white;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 15px;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.title h2{
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.search{
+    display:block;
+    width:100%;
+    max-width:550px;
+    margin:0 auto 35px;
+    padding:15px 20px;
+    border:1px solid #ddd;
+    border-radius:30px;
+    font-size:16px;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.product{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.product:hover{
+    transform:translateY(-6px);
+}
+
+.product img{
+    width:100%;
+    height:270px;
+    object-fit:contain;
+    padding:15px;
+    background:#f7f7f7;
+}
+
+.info{
+    padding:20px;
+}
+
+.info h3{
+    margin-bottom:8px;
+}
+
+.category{
+    color:#777;
+    margin-bottom:10px;
+}
+
+.price{
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.order{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#222;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.about{
+    background:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.about p{
+    max-width:750px;
+    margin:15px auto;
+    line-height:1.7;
+}
+
+.delivery{
+    padding:50px 20px;
+    text-align:center;
+}
+
+.delivery-box{
+    max-width:800px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,.07);
+}
+
+.contact{
+    background:#171717;
+    color:white;
+    text-align:center;
+    padding:55px 20px;
+}
+
+.contact p{
+    margin:12px 0;
+}
+
+.payment{
+    margin-top:25px;
+    line-height:2;
+}
+
+footer{
+    background:#000;
+    color:#aaa;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:600px){
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    nav a{
+        display:inline-block;
+        margin:6px;
+    }
+
+    .product img{
+        height:240px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <!-- TU POURRAS REMPLACER CECI PAR TON LOGO -->
+    <div class="logo">ZOUM SERVICES</div>
+
+    <p>
+        Produits cosmétiques • Parfums
+    </p>
+
+</header>
+
+<nav>
+
+    <a href="#accueil">Accueil</a>
+    <a href="#parfums">Parfums</a>
+    <a href="#apropos">À propos</a>
+    <a href="#livraison">Livraison</a>
+    <a href="#contact">Contact</a>
+
+</nav>
+
+<section class="hero" id="accueil">
+
+    <h1>Bienvenue chez Zoum Services</h1>
+
+    <p>
+        Découvrez notre sélection de parfums
+        et produits cosmétiques pour révéler
+        votre personnalité et votre élégance.
+    </p>
+
+    <a
+        class="btn whatsapp"
+        href="https://wa.me/225170330522"
+        target="_blank"
+    >
+        💬 Commander sur WhatsApp
+    </a>
+
+</section>
+
+
+<section class="container" id="parfums">
+
+    <div class="title">
+
+        <h2>🌸 Nos parfums</h2>
+
+        <p>
+            Découvrez notre sélection de parfums.
+        </p>
+
+    </div>
+
+    <input
+        type="text"
+        id="search"
+        class="search"
+        placeholder="🔎 Rechercher un parfum..."
+    >
+
+
+    <div class="products" id="products">
+
+
+        <!-- 1 -->
+        <div class="product" data-name="Dior Sauvage">
+
+            <img
+                src="images/sauvage.jpg"
+                alt="Dior Sauvage"
+            >
+
+            <div class="info">
+
+                <h3>Dior Sauvage</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Dior Sauvage')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+        <div class="product" data-name="Bleu de Chanel">
+
+            <img
+                src="images/bleu-chanel.jpg"
+                alt="Bleu de Chanel"
+            >
+
+            <div class="info">
+
+                <h3>Bleu de Chanel</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Bleu de Chanel')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 -->
+        <div class="product" data-name="Jean Paul Gaultier Le Male">
+
+            <img
+                src="images/le-male.jpg"
+                alt="Jean Paul Gaultier Le Male"
+            >
+
+            <div class="info">
+
+                <h3>Jean Paul Gaultier Le Male</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Jean Paul Gaultier Le Male')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+        <div class="product" data-name="1 Million">
+
+            <img
+                src="images/1-million.jpg"
+                alt="1 Million"
+            >
+
+            <div class="info">
+
+                <h3>1 Million</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('1 Million')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+        <div class="product" data-name="Invictus">
+
+            <img
+                src="images/invictus.jpg"
+                alt="Invictus"
+            >
+
+            <div class="info">
+
+                <h3>Invictus</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Invictus')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+        <div class="product" data-name="Acqua di Gio">
+
+            <img
+                src="images/acqua-di-gio.jpg"
+                alt="Acqua di Gio"
+            >
+
+            <div class="info">
+
+                <h3>Acqua di Giò</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Acqua di Giò')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+        <div class="product" data-name="Versace Eros">
+
+            <img
+                src="images/eros.jpg"
+                alt="Versace Eros"
+            >
+
+            <div class="info">
+
+                <h3>Versace Eros</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Versace Eros')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+        <div class="product" data-name="Azzaro Wanted">
+
+            <img
+                src="images/wanted.jpg"
+                alt="Azzaro Wanted"
+            >
+
+            <div class="info">
+
+                <h3>Azzaro Wanted</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Azzaro Wanted')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9 -->
+        <div class="product" data-name="YSL Y">
+
+            <img
+                src="images/ysl-y.jpg"
+                alt="YSL Y"
+            >
+
+            <div class="info">
+
+                <h3>YSL Y</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('YSL Y')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10 -->
+        <div class="product" data-name="Boss Bottled">
+
+            <img
+                src="images/boss-bottled.jpg"
+                alt="Boss Bottled"
+            >
+
+            <div class="info">
+
+                <h3>Hugo Boss Bottled</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Hugo Boss Bottled')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 11 -->
+        <div class="product" data-name="Dior Homme">
+
+            <img
+                src="images/dior-homme.jpg"
+                alt="Dior Homme"
+            >
+
+            <div class="info">
+
+                <h3>Dior Homme</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Dior Homme')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 12 -->
+        <div class="product" data-name="Allure Homme Sport">
+
+            <img
+                src="images/allure-homme.jpg"
+                alt="Allure Homme Sport"
+            >
+
+            <div class="info">
+
+                <h3>Allure Homme Sport</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Allure Homme Sport')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 13 -->
+        <div class="product" data-name="Stronger With You">
+
+            <img
+                src="images/stronger-with-you.jpg"
+                alt="Stronger With You"
+            >
+
+            <div class="info">
+
+                <h3>Stronger With You</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Stronger With You')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 14 -->
+        <div class="product" data-name="Lattafa Asad">
+
+            <img
+                src="images/asad.jpg"
+                alt="Lattafa Asad"
+            >
+
+            <div class="info">
+
+                <h3>Lattafa Asad</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Lattafa Asad')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 15 -->
+        <div class="product" data-name="Lattafa Khamrah">
+
+            <img
+                src="images/khamrah.jpg"
+                alt="Lattafa Khamrah"
+            >
+
+            <div class="info">
+
+                <h3>Lattafa Khamrah</h3>
+
+                <p class="category">Unisexe</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Lattafa Khamrah')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 16 -->
+        <div class="product" data-name="Afnan 9PM">
+
+            <img
+                src="images/9pm.jpg"
+                alt="Afnan 9PM"
+            >
+
+            <div class="info">
+
+                <h3>Afnan 9PM</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Afnan 9PM')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 17 -->
+        <div class="product" data-name="Tom Ford Oud Wood">
+
+            <img
+                src="images/oud-wood.jpg"
+                alt="Tom Ford Oud Wood"
+            >
+
+            <div class="info">
+
+                <h3>Tom Ford Oud Wood</h3>
+
+                <p class="category">Unisexe</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Tom Ford Oud Wood')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 18 -->
+        <div class="product" data-name="Creed Aventus">
+
+            <img
+                src="images/aventus.jpg"
+                alt="Creed Aventus"
+            >
+
+            <div class="info">
+
+                <h3>Creed Aventus</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Creed Aventus')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 19 -->
+        <div class="product" data-name="Bad Boy">
+
+            <img
+                src="images/bad-boy.jpg"
+                alt="Carolina Herrera Bad Boy"
+            >
+
+            <div class="info">
+
+                <h3>Carolina Herrera Bad Boy</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('Carolina Herrera Bad Boy')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- 20 -->
+        <div class="product" data-name="1 Million Elixir">
+
+            <img
+                src="images/one-million-elixir.jpg"
+                alt="1 Million Elixir"
+            >
+
+            <div class="info">
+
+                <h3>1 Million Elixir</h3>
+
+                <p class="category">Homme</p>
+
+                <p class="price">
+                    Prix sur demande
+                </p>
+
+                <button
+                    class="order"
+                    onclick="commander('1 Million Elixir')"
+                >
+                    Commander
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="apropos">
+
+    <h2>À propos de Zoum Services</h2>
+
+    <p>
+        Bienvenue chez Zoum Services.
+        Nous sommes spécialisés dans les produits
+        cosmétiques, notamment les parfums.
+    </p>
+
+    <p>
+        Notre boutique est située à
+        <strong>Balouzon Palmeraies</strong>,
+        non loin de la Cour d'Appel,
+        sur la route d'Abidjan.
+    </p>
+
+</section>
+
+
+<section class="delivery" id="livraison">
+
+    <div class="delivery-box">
+
+        <h2>🚚 Livraison & Expédition</h2>
+
+        <p>
+            Nous effectuons la livraison
+            partout à Daloa.
+        </p>
+
+        <p>
+            Nous proposons également
+            l'expédition partout.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="contact" id="contact">
+
+    <h2>📞 Contactez Zoum Services</h2>
+
+    <p>
+        📍 Balouzon Palmeraies,
+        non loin de la Cour d'Appel,
+        route d'Abidjan.
+    </p>
+
+    <p>
+        📱 WhatsApp :
+        <strong>01 70 33 05 22</strong>
+    </p>
+
+    <p>
+        📱 WhatsApp :
+        <strong>05 74 43 92 90</strong>
+    </p>
+
+
+    <div class="payment">
+
+        <h3>💳 Moyens de paiement</h3>
+
+        <p>
+            Wave : 01 70 33 05 22
+        </p>
+
+        <p>
+            Moov Money : 01 70 33 05 22
+        </p>
+
+        <p>
+            MTN Money : 05 74 43 92 90
+        </p>
+
+        <p>
+            Orange Money : 07 02 52 74 42
+        </p>
+
+    </div>
+
+
+    <a
+        class="btn whatsapp"
+        href="https://wa.me/225170330522"
+        target="_blank"
+    >
+        💬 Écrire sur WhatsApp
+    </a>
+
+</section>
+
+
+<footer>
+
+    <p>
+        © 2026 Zoum Services.
+        Tous droits réservés.
+    </p>
+
+    <p>
+        Produits cosmétiques • Parfums
+    </p>
+
+</footer>
+
+
+<script>
+
+const search =
+document.getElementById("search");
+
+const products =
+document.querySelectorAll(".product");
+
+
+search.addEventListener("input", function(){
+
+    const value =
+    this.value.toLowerCase();
+
+    products.forEach(product => {
+
+        const name =
+        product.dataset.name.toLowerCase();
+
+        product.style.display =
+        name.includes(value)
+        ? "block"
+        : "none";
+
+    });
+
+});
+
+
+function commander(parfum){
+
+    const numero =
+    "225170330522";
+
+    const message =
+    "Bonjour Zoum Services, " +
+    "je suis intéressé(e) par le parfum : " +
+    parfum +
+    ". Je voudrais connaître le prix " +
+    "et les informations concernant la livraison.";
+
+    const url =
+    "https://wa.me/" +
+    numero +
+    "?text=" +
+    encodeURIComponent(message);
+
+    window.open(url, "_blank");
+}
+
+</script>
+
+</body>
+</html>
