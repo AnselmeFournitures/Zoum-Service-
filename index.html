@@ -1,1078 +1,911 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Zoum Services | Parfums & Cosmétiques</title>
+  <title>Zoum Services - Parfums de marque</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    background:#faf8f6;
-    color:#222;
-}
-
-header{
-    background:linear-gradient(135deg,#111,#6b4b3e);
-    color:white;
-    text-align:center;
-    padding:30px 15px;
-}
-
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-header p{
-    margin-top:8px;
-    color:#eee;
-}
-
-nav{
-    background:white;
-    padding:16px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:10;
-    box-shadow:0 2px 10px #ddd;
-}
-
-nav a{
-    color:#222;
-    text-decoration:none;
-    font-weight:bold;
-    margin:0 10px;
-}
-
-.hero{
-    text-align:center;
-    padding:70px 20px;
-    background:linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.55)
-    ),
-    url("images/hero.jpg") center/cover;
-    color:white;
-}
-
-.hero h1{
-    font-size:42px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:19px;
-    max-width:700px;
-    margin:auto;
-    line-height:1.6;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.whatsapp{
-    background:#25D366;
-    color:white;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:50px 15px;
-}
-
-.title{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.title h2{
-    font-size:30px;
-    margin-bottom:10px;
-}
-
-.search{
-    display:block;
-    width:100%;
-    max-width:550px;
-    margin:0 auto 35px;
-    padding:15px 20px;
-    border:1px solid #ddd;
-    border-radius:30px;
-    font-size:16px;
-}
-
-.products{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-}
-
-.product{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.product:hover{
-    transform:translateY(-6px);
-}
-
-.product img{
-    width:100%;
-    height:270px;
-    object-fit:contain;
-    padding:15px;
-    background:#f7f7f7;
-}
-
-.info{
-    padding:20px;
-}
-
-.info h3{
-    margin-bottom:8px;
-}
-
-.category{
-    color:#777;
-    margin-bottom:10px;
-}
-
-.price{
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.order{
-    width:100%;
-    padding:12px;
-    border:none;
-    border-radius:8px;
-    background:#222;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.about{
-    background:white;
-    text-align:center;
-    padding:60px 20px;
-}
-
-.about p{
-    max-width:750px;
-    margin:15px auto;
-    line-height:1.7;
-}
-
-.delivery{
-    padding:50px 20px;
-    text-align:center;
-}
-
-.delivery-box{
-    max-width:800px;
-    margin:auto;
-    background:white;
-    padding:30px;
-    border-radius:18px;
-    box-shadow:0 5px 20px rgba(0,0,0,.07);
-}
-
-.contact{
-    background:#171717;
-    color:white;
-    text-align:center;
-    padding:55px 20px;
-}
-
-.contact p{
-    margin:12px 0;
-}
-
-.payment{
-    margin-top:25px;
-    line-height:2;
-}
-
-footer{
-    background:#000;
-    color:#aaa;
-    text-align:center;
-    padding:20px;
-}
-
-@media(max-width:600px){
-
-    .hero h1{
-        font-size:30px;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    nav a{
-        display:inline-block;
-        margin:6px;
+    body {
+      background: #f8f7f5;
+      color: #222;
     }
 
-    .product img{
-        height:240px;
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
     }
-}
-</style>
+
+    /* EMPLACEMENT DU LOGO */
+    .logo {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: white;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      margin-top: 7px;
+      color: #ddd;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #111, #444);
+      color: white;
+      text-align: center;
+      padding: 65px 20px;
+    }
+
+    .hero h2 {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 45px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #666;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 260px;
+      background: #f1f1f1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .image-placeholder {
+      color: #888;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .brand {
+      color: #777;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .product h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .whatsapp {
+      display: block;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .whatsapp:hover {
+      opacity: 0.85;
+    }
+
+    .about {
+      background: white;
+      text-align: center;
+      padding: 55px 20px;
+    }
+
+    .about h2 {
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 750px;
+      margin: 10px auto;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    footer {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      margin: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 27px;
+      }
+
+      header h1 {
+        font-size: 23px;
+      }
+
+      .product-image {
+        height: 230px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
 
-    <!-- TU POURRAS REMPLACER CECI PAR TON LOGO -->
-    <div class="logo">ZOUM SERVICES</div>
+  <!-- TON LOGO POURRA ÊTRE AJOUTÉ ICI PLUS TARD -->
+  <div class="logo">
+    LOGO
+  </div>
 
-    <p>
-        Produits cosmétiques • Parfums
-    </p>
+  <h1>ZOUM SERVICES</h1>
+  <p>Parfums de grandes marques</p>
 
 </header>
 
-<nav>
 
-    <a href="#accueil">Accueil</a>
-    <a href="#parfums">Parfums</a>
-    <a href="#apropos">À propos</a>
-    <a href="#livraison">Livraison</a>
-    <a href="#contact">Contact</a>
+<section class="hero">
 
-</nav>
+  <h2>L'élégance commence par un parfum</h2>
 
-<section class="hero" id="accueil">
-
-    <h1>Bienvenue chez Zoum Services</h1>
-
-    <p>
-        Découvrez notre sélection de parfums
-        et produits cosmétiques pour révéler
-        votre personnalité et votre élégance.
-    </p>
-
-    <a
-        class="btn whatsapp"
-        href="https://wa.me/225170330522"
-        target="_blank"
-    >
-        💬 Commander sur WhatsApp
-    </a>
+  <p>
+    Découvrez notre sélection de parfums de grandes marques
+    pour hommes et femmes. Qualité, élégance et satisfaction.
+  </p>
 
 </section>
 
 
-<section class="container" id="parfums">
+<section class="container">
 
-    <div class="title">
+  <div class="section-title">
+    <h2>Nos parfums</h2>
+    <p>Découvrez notre sélection de parfums</p>
+  </div>
 
-        <h2>🌸 Nos parfums</h2>
 
-        <p>
-            Découvrez notre sélection de parfums.
+  <div class="products">
+
+
+    <!-- 1. DIOR SAUVAGE -->
+    <div class="product">
+
+      <div class="product-image">
+        <!-- AJOUTE TA PHOTO ICI PLUS TARD -->
+        <div class="image-placeholder">
+          Photo Dior Sauvage
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Dior</div>
+
+        <h3>Sauvage Eau de Toilette</h3>
+
+        <p class="description">
+          Une fragrance masculine fraîche, boisée et élégante.
         </p>
 
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Dior%20Sauvage."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
     </div>
 
-    <input
-        type="text"
-        id="search"
-        class="search"
-        placeholder="🔎 Rechercher un parfum..."
-    >
 
+    <!-- 2. DIOR J'ADORE -->
+    <div class="product">
 
-    <div class="products" id="products">
-
-
-        <!-- 1 -->
-        <div class="product" data-name="Dior Sauvage">
-
-            <img
-                src="images/sauvage.jpg"
-                alt="Dior Sauvage"
-            >
-
-            <div class="info">
-
-                <h3>Dior Sauvage</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Dior Sauvage')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Dior J'adore
         </div>
+      </div>
 
+      <div class="product-info">
 
-        <!-- 2 -->
-        <div class="product" data-name="Bleu de Chanel">
+        <div class="brand">Dior</div>
 
-            <img
-                src="images/bleu-chanel.jpg"
-                alt="Bleu de Chanel"
-            >
+        <h3>J'adore Eau de Parfum</h3>
 
-            <div class="info">
+        <p class="description">
+          Une fragrance féminine florale et élégante.
+        </p>
 
-                <h3>Bleu de Chanel</h3>
+        <div class="price">Prix sur demande</div>
 
-                <p class="category">Homme</p>
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Dior%20J%27adore."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
 
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Bleu de Chanel')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 3 -->
-        <div class="product" data-name="Jean Paul Gaultier Le Male">
-
-            <img
-                src="images/le-male.jpg"
-                alt="Jean Paul Gaultier Le Male"
-            >
-
-            <div class="info">
-
-                <h3>Jean Paul Gaultier Le Male</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Jean Paul Gaultier Le Male')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 4 -->
-        <div class="product" data-name="1 Million">
-
-            <img
-                src="images/1-million.jpg"
-                alt="1 Million"
-            >
-
-            <div class="info">
-
-                <h3>1 Million</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('1 Million')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 5 -->
-        <div class="product" data-name="Invictus">
-
-            <img
-                src="images/invictus.jpg"
-                alt="Invictus"
-            >
-
-            <div class="info">
-
-                <h3>Invictus</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Invictus')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 6 -->
-        <div class="product" data-name="Acqua di Gio">
-
-            <img
-                src="images/acqua-di-gio.jpg"
-                alt="Acqua di Gio"
-            >
-
-            <div class="info">
-
-                <h3>Acqua di Giò</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Acqua di Giò')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 7 -->
-        <div class="product" data-name="Versace Eros">
-
-            <img
-                src="images/eros.jpg"
-                alt="Versace Eros"
-            >
-
-            <div class="info">
-
-                <h3>Versace Eros</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Versace Eros')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 8 -->
-        <div class="product" data-name="Azzaro Wanted">
-
-            <img
-                src="images/wanted.jpg"
-                alt="Azzaro Wanted"
-            >
-
-            <div class="info">
-
-                <h3>Azzaro Wanted</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Azzaro Wanted')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 9 -->
-        <div class="product" data-name="YSL Y">
-
-            <img
-                src="images/ysl-y.jpg"
-                alt="YSL Y"
-            >
-
-            <div class="info">
-
-                <h3>YSL Y</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('YSL Y')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 10 -->
-        <div class="product" data-name="Boss Bottled">
-
-            <img
-                src="images/boss-bottled.jpg"
-                alt="Boss Bottled"
-            >
-
-            <div class="info">
-
-                <h3>Hugo Boss Bottled</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Hugo Boss Bottled')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 11 -->
-        <div class="product" data-name="Dior Homme">
-
-            <img
-                src="images/dior-homme.jpg"
-                alt="Dior Homme"
-            >
-
-            <div class="info">
-
-                <h3>Dior Homme</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Dior Homme')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 12 -->
-        <div class="product" data-name="Allure Homme Sport">
-
-            <img
-                src="images/allure-homme.jpg"
-                alt="Allure Homme Sport"
-            >
-
-            <div class="info">
-
-                <h3>Allure Homme Sport</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Allure Homme Sport')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 13 -->
-        <div class="product" data-name="Stronger With You">
-
-            <img
-                src="images/stronger-with-you.jpg"
-                alt="Stronger With You"
-            >
-
-            <div class="info">
-
-                <h3>Stronger With You</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Stronger With You')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 14 -->
-        <div class="product" data-name="Lattafa Asad">
-
-            <img
-                src="images/asad.jpg"
-                alt="Lattafa Asad"
-            >
-
-            <div class="info">
-
-                <h3>Lattafa Asad</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Lattafa Asad')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 15 -->
-        <div class="product" data-name="Lattafa Khamrah">
-
-            <img
-                src="images/khamrah.jpg"
-                alt="Lattafa Khamrah"
-            >
-
-            <div class="info">
-
-                <h3>Lattafa Khamrah</h3>
-
-                <p class="category">Unisexe</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Lattafa Khamrah')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 16 -->
-        <div class="product" data-name="Afnan 9PM">
-
-            <img
-                src="images/9pm.jpg"
-                alt="Afnan 9PM"
-            >
-
-            <div class="info">
-
-                <h3>Afnan 9PM</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Afnan 9PM')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 17 -->
-        <div class="product" data-name="Tom Ford Oud Wood">
-
-            <img
-                src="images/oud-wood.jpg"
-                alt="Tom Ford Oud Wood"
-            >
-
-            <div class="info">
-
-                <h3>Tom Ford Oud Wood</h3>
-
-                <p class="category">Unisexe</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Tom Ford Oud Wood')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 18 -->
-        <div class="product" data-name="Creed Aventus">
-
-            <img
-                src="images/aventus.jpg"
-                alt="Creed Aventus"
-            >
-
-            <div class="info">
-
-                <h3>Creed Aventus</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Creed Aventus')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 19 -->
-        <div class="product" data-name="Bad Boy">
-
-            <img
-                src="images/bad-boy.jpg"
-                alt="Carolina Herrera Bad Boy"
-            >
-
-            <div class="info">
-
-                <h3>Carolina Herrera Bad Boy</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('Carolina Herrera Bad Boy')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
-
-        <!-- 20 -->
-        <div class="product" data-name="1 Million Elixir">
-
-            <img
-                src="images/one-million-elixir.jpg"
-                alt="1 Million Elixir"
-            >
-
-            <div class="info">
-
-                <h3>1 Million Elixir</h3>
-
-                <p class="category">Homme</p>
-
-                <p class="price">
-                    Prix sur demande
-                </p>
-
-                <button
-                    class="order"
-                    onclick="commander('1 Million Elixir')"
-                >
-                    Commander
-                </button>
-
-            </div>
-
-        </div>
-
+      </div>
     </div>
+
+
+    <!-- 3. BLEU DE CHANEL -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Bleu de Chanel
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Chanel</div>
+
+        <h3>Bleu de Chanel Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance masculine élégante et intemporelle.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Bleu%20de%20Chanel."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 4. COCO MADEMOISELLE -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Coco Mademoiselle
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Chanel</div>
+
+        <h3>Coco Mademoiselle Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance féminine élégante et raffinée.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Coco%20Mademoiselle."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 5. YSL LIBRE -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo YSL Libre
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Yves Saint Laurent</div>
+
+        <h3>Libre Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance féminine florale et moderne.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20YSL%20Libre."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 6. YSL BLACK OPIUM -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Black Opium
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Yves Saint Laurent</div>
+
+        <h3>Black Opium Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance féminine intense et sophistiquée.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20YSL%20Black%20Opium."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 7. ACQUA DI GIO -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Acqua di Giò
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Giorgio Armani</div>
+
+        <h3>Acqua di Giò</h3>
+
+        <p class="description">
+          Une fragrance fraîche inspirée de la mer.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Acqua%20di%20Gi%C3%B2."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 8. ARMANI CODE -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Armani Code
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Giorgio Armani</div>
+
+        <h3>Armani Code</h3>
+
+        <p class="description">
+          Une fragrance masculine élégante et sophistiquée.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Armani%20Code."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 9. ARMANI SI -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Armani Sì
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Giorgio Armani</div>
+
+        <h3>Sì Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance féminine élégante et raffinée.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Armani%20S%C3%AC."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 10. ARMANI MY WAY -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Armani My Way
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Giorgio Armani</div>
+
+        <h3>My Way Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance florale moderne et lumineuse.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Armani%20My%20Way."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 11. VERSACE EROS -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Versace Eros
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Versace</div>
+
+        <h3>Eros Eau de Toilette</h3>
+
+        <p class="description">
+          Une fragrance masculine fraîche et boisée.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Versace%20Eros."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 12. VERSACE BRIGHT CRYSTAL -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Bright Crystal
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Versace</div>
+
+        <h3>Bright Crystal</h3>
+
+        <p class="description">
+          Une fragrance féminine fraîche et florale.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Versace%20Bright%20Crystal."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 13. 1 MILLION -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo 1 Million
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Rabanne</div>
+
+        <h3>1 Million Eau de Toilette</h3>
+
+        <p class="description">
+          Une fragrance masculine chaleureuse et élégante.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Rabanne%201%20Million."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 14. LADY MILLION -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Lady Million
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Rabanne</div>
+
+        <h3>Lady Million Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance féminine élégante et séduisante.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Rabanne%20Lady%20Million."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 15. LA VIE EST BELLE -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo La Vie Est Belle
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Lancôme</div>
+
+        <h3>La Vie Est Belle Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance féminine douce et élégante.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20La%20Vie%20Est%20Belle."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 16. GOOD GIRL -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Good Girl
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Carolina Herrera</div>
+
+        <h3>Good Girl Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance féminine moderne et sophistiquée.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Carolina%20Herrera%20Good%20Girl."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 17. LE MALE -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Le Male
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Jean Paul Gaultier</div>
+
+        <h3>Le Male Eau de Toilette</h3>
+
+        <p class="description">
+          Une fragrance masculine emblématique et élégante.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Jean%20Paul%20Gaultier%20Le%20Male."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 18. TOM FORD OUD WOOD -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Tom Ford Oud Wood
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Tom Ford</div>
+
+        <h3>Oud Wood Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance boisée et luxueuse.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Tom%20Ford%20Oud%20Wood."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 19. DIOR FAHRENHEIT -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Dior Fahrenheit
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Dior</div>
+
+        <h3>Fahrenheit Eau de Toilette</h3>
+
+        <p class="description">
+          Une fragrance masculine emblématique de Dior.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Dior%20Fahrenheit."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+    <!-- 20. LANCOME IDÔLE -->
+    <div class="product">
+
+      <div class="product-image">
+        <div class="image-placeholder">
+          Photo Lancôme Idôle
+        </div>
+      </div>
+
+      <div class="product-info">
+
+        <div class="brand">Lancôme</div>
+
+        <h3>Idôle Eau de Parfum</h3>
+
+        <p class="description">
+          Une fragrance féminine moderne et lumineuse.
+        </p>
+
+        <div class="price">Prix sur demande</div>
+
+        <a class="whatsapp"
+           href="https://wa.me/2250170330522?text=Bonjour%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20Lanc%C3%B4me%20Id%C3%B4le."
+           target="_blank">
+          Commander sur WhatsApp
+        </a>
+
+      </div>
+    </div>
+
+
+  </div>
 
 </section>
 
 
-<section class="about" id="apropos">
+<section class="about">
 
-    <h2>À propos de Zoum Services</h2>
+  <h2>À propos de Zoum Services</h2>
 
-    <p>
-        Bienvenue chez Zoum Services.
-        Nous sommes spécialisés dans les produits
-        cosmétiques, notamment les parfums.
-    </p>
+  <p>
+    Zoum Services vous propose une sélection de parfums
+    de grandes marques pour hommes et femmes.
+  </p>
 
-    <p>
-        Notre boutique est située à
-        <strong>Balouzon Palmeraies</strong>,
-        non loin de la Cour d'Appel,
-        sur la route d'Abidjan.
-    </p>
-
-</section>
-
-
-<section class="delivery" id="livraison">
-
-    <div class="delivery-box">
-
-        <h2>🚚 Livraison & Expédition</h2>
-
-        <p>
-            Nous effectuons la livraison
-            partout à Daloa.
-        </p>
-
-        <p>
-            Nous proposons également
-            l'expédition partout.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section class="contact" id="contact">
-
-    <h2>📞 Contactez Zoum Services</h2>
-
-    <p>
-        📍 Balouzon Palmeraies,
-        non loin de la Cour d'Appel,
-        route d'Abidjan.
-    </p>
-
-    <p>
-        📱 WhatsApp :
-        <strong>01 70 33 05 22</strong>
-    </p>
-
-    <p>
-        📱 WhatsApp :
-        <strong>05 74 43 92 90</strong>
-    </p>
-
-
-    <div class="payment">
-
-        <h3>💳 Moyens de paiement</h3>
-
-        <p>
-            Wave : 01 70 33 05 22
-        </p>
-
-        <p>
-            Moov Money : 01 70 33 05 22
-        </p>
-
-        <p>
-            MTN Money : 05 74 43 92 90
-        </p>
-
-        <p>
-            Orange Money : 07 02 52 74 42
-        </p>
-
-    </div>
-
-
-    <a
-        class="btn whatsapp"
-        href="https://wa.me/225170330522"
-        target="_blank"
-    >
-        💬 Écrire sur WhatsApp
-    </a>
+  <p>
+    Pour connaître la disponibilité et le prix d'un parfum,
+    contactez-nous directement sur WhatsApp.
+  </p>
 
 </section>
 
 
 <footer>
 
-    <p>
-        © 2026 Zoum Services.
-        Tous droits réservés.
-    </p>
+  <p><strong>ZOUM SERVICES</strong></p>
 
-    <p>
-        Produits cosmétiques • Parfums
-    </p>
+  <p>Parfums de grandes marques</p>
+
+  <p>© 2026 Zoum Services - Tous droits réservés</p>
 
 </footer>
-
-
-<script>
-
-const search =
-document.getElementById("search");
-
-const products =
-document.querySelectorAll(".product");
-
-
-search.addEventListener("input", function(){
-
-    const value =
-    this.value.toLowerCase();
-
-    products.forEach(product => {
-
-        const name =
-        product.dataset.name.toLowerCase();
-
-        product.style.display =
-        name.includes(value)
-        ? "block"
-        : "none";
-
-    });
-
-});
-
-
-function commander(parfum){
-
-    const numero =
-    "225170330522";
-
-    const message =
-    "Bonjour Zoum Services, " +
-    "je suis intéressé(e) par le parfum : " +
-    parfum +
-    ". Je voudrais connaître le prix " +
-    "et les informations concernant la livraison.";
-
-    const url =
-    "https://wa.me/" +
-    numero +
-    "?text=" +
-    encodeURIComponent(message);
-
-    window.open(url, "_blank");
-}
-
-</script>
 
 </body>
 </html>
